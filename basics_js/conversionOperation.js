@@ -128,8 +128,9 @@ const UserOne ={
 let UserTwo = UserOne;
 UserTwo.email = "random@gmail.com"
 
-console.log(UserOne.email);
-console.log(UserTwo.email);
+//console.log(UserOne.email);
+//console.log(UserTwo.email);
+
 
 
 

@@ -33,5 +33,3 @@ console.log(Math.max(4,6,8,9,2));
 const min = 1;
 const max = 6;
 console.log(Math.floor(Math.random() * (max - min +1) + min));
-
-

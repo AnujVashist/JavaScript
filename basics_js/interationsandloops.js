@@ -172,7 +172,235 @@ const greetings = "hello world"
 for (const greet of greetings){
     //console.log(greet)
 }
-//The Map object holds key-value pairs
-// const map = New Map();
+//The Map object holds key-value pairs.
+// only unique values in the map. no duplicate values
+// const map = new Map();
+// map.set('IN', 'India')
+// map.set('USA', "United States of America")
+// map.set('FR', 'France')
+// map.set('IN', 'India') // only unique value no duplicate and in same order .
+
+//console.log(map)
+/*
+Map(3) {
+  'IN' => 'India',
+  'USA' => 'United States of America',
+  'FR' => 'France'
+}
+*/
+// array destructor
+// for (const [key, value] of map) {
+//     //console.log(key ,':-', value)
+// }
+//output 
+/*
+IN :- India
+USA :- United States of America
+FR :- France
+*/
+
+// const myObject = {
+//     game1 : 'NFS',
+//     game2 : 'PUBG'
+// }
+
+// this syntax is not for object 
+// for (const [key, value] of myObject) {
+//     console.log(key ,':-', value)
+// }
+ // note: for of work in the map but not in the object .
+
+const myObject = {
+    js : 'javascript',
+    cpp : 'c++',
+    rb : 'ruby',
+    swift : 'swift by apple'
+} 
+// for (const key in object) {
+//     if (Object.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// }
+
+for (const key in myObject){
+    //console.log(`${key} shortcut is for ${myObject[key]}`)
+}
+/*
+js shortcut is for javascript
+cpp shortcut is for c++
+rb shortcut is for ruby
+swift shortcut is for swift by apple
+*/
+
+const programming = ["js", "ruby", "swift", "c++"]
+for (const key in programming) {
+    //console.log(key)
+    //console.log(programming[key])
+}
+// In case of array only key show but in the object keyvalye show 
+/*
+0 console.log(key) 
+1
+2
+3
+js console.log(programming[key])
+ruby
+swift
+c++
+*/
+
+const map = new Map();
+map.set('IN', 'India')
+map.set('USA', "United States of America")
+map.set('FR', 'France')
+map.set('IN', 'India')
+
+// note : . A Map object is iterated by key-value pairs — a for...of loop returns a 2-member array of [key, value] for each iteration.
+// for (const key in map) {
+//     console.log(key)
+// }
+
+// use the object using the for-in loop and use the array use the for-of loop and other methods used in the array like forEach , map, filter, reduce etc method used...
+
+// forEach loop
+const coding = ['js', 'ruby', 'c++', 'java', 'css', 'html']
+// coding.forEach(function (items){
+//     console.log(items)
+// })
+//arrow function
+// coding.forEach( (items)=> {
+//     console.log(items)
+// })
+//callback function used in forEach
+
+// normal function : function name(){}
+// callback function :  function (){}
+
+// function printMe (items){
+//     console.log(items)
+// }
+// // only refrence not excute
+// coding.forEach(printMe)
+
+
+// coding.forEach((items, index, arr)=>{
+//     console.log(items, index, arr)
+// })
+
+const mycoding = [
+    {
+        languageName : 'javascript',
+        languageFileName : 'js'
+    },
+    {
+        languageName : 'java',
+        languageFileName : 'java'
+    },
+    {
+        languageName : 'python',
+        languageFileName : 'py'
+    }
+]
+
+// mycoding.forEach((items)=>{
+//     console.log(items.languageFileName, '||', items.languageName)
+// })
+
+/* Note :  forEach not return the value  */
+
+//******  map, filter and reduce
+/* */
+const myNums = [1,2,3,4,5,7,8,9,10]
+// filter return the value and in filter use the callback function inside the callback use the condition
+//use this type of callback function then not use the curly braces
+// const newnum= myNums.filter( (num)=> (num > 4))
+//use this type of callback function then use the curly braces and return keyword.
+// *********** using filter 
+// const newnum = myNums.filter( (num) => {
+//     return num > 4
+// })
+
+//******** using forEach */
+const newnum = []
+// myNums.forEach( (num)=> {
+//     if(num> 4){
+//         newnum.push(num)
+//     }
+// })
+// console.log(newnum)
+
+const books = [
+    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
+    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
+    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+  ];
+
+let userBooks = books.filter( (bk) => (bk.genre === 'History'))
+
+// userBooks = books.filter( (bk) => { 
+//     return bk.publish >= 1995
+// })
+userBooks = books.filter( (bk) => { 
+    return bk.publish >= 1995 && bk.genre ==='History'
+})
+//console.log(userBooks)
+// Note : filter only return value and true and false 
+const MyNumbers = [1,2,3,4,5,6,7,8,9,10]
+
+const newnumbers = MyNumbers.map((nums) => { return nums + 10})
+//console.log(newnumbers)
+
+// chaining map().map()
+// map().filter() etc
+
+// const newnumbers = MyNumbers
+//             .map((nums) =>  nums * 10)
+//             .map( (nums) => nums + 1)
+//             .filter ((nums) => nums >=40)
+//console.log(newnumbers);
+
+// reduce method ******
+
+const myNumb = [1,2,3,4,5,6]
+//initialValue is 0
+// const TotalNum = myNumb.reduce( function (acc, currval) {
+//     console.log(`accumulator value :  ${acc} and  currentValue : ${currval} `)
+//     return acc + currval
+// }, 0)
+
+// using aarrow function
+const TotalNum = myNumb.reduce( (acc, currval) => acc + currval , 0)
+//console.log(TotalNum)
+
+const shoppingCart = [
+    {
+        itemName: 'js',
+        price : 2999
+    },
+    {
+        itemName: 'python',
+        price : 1999
+    },
+    {
+        itemName: 'html,css',
+        price : 999
+    },
+    {
+        itemName: 'frame works',
+        price : 3999
+    }
+]
+
+//console.log(shoppingCart)
+const priceToPay = shoppingCart.reduce( (acc, item) => acc +  item.price, 0)
+console.log(priceToPay)
+
 
 

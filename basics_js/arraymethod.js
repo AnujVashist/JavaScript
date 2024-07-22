@@ -37,7 +37,7 @@ const myArr2  = ["ironman", "thor"];
 
 const myArr3 = new Array(1,3,5,6,9)
 
-const newArr = myArr.join();
+const newArr = myArr.join(" | ");
 //console.log(myArr);
 //console.log(newArr);
 //console.log(typeof newArr); //string
@@ -59,6 +59,6 @@ const myn2 = myArr.splice(1,3);
 console.log(myn2); //[ 1, 2, 3 ]
 
 console.log("c", myArr); //c [ 0, 4, 5, 6 ]
-
 */
+
 

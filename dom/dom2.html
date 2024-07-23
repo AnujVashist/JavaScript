@@ -10,7 +10,42 @@
         <div class="days">Monday</div>
         <div class="days">Tuesday</div>
         <div class="days">Wednesday</div>
-        <div class="days">Thusday</div>
+        <div class="days">Thursday</div>
     </div>
 </body>
+<script>
+    const parent = document.querySelector(".parent")
+    //console.log(parent)
+    //console.log(parent.children) // HTML collections like array 
+    //console.log(parent.children[1]) // output is div.days and it is the part of HTML collections 
+    //console.log(parent.children[1].innerHTML) //Tuesday
+
+    /*for(let i = 0; i < parent.children.length; i++){
+        const element = parent.children[i].innerHTML
+        console.log(element) 
+    }*/
+        /*
+        output is : 
+        Tuesday
+        Monday
+        Tuesday
+        Wednesday
+        Thursday
+        */
+    parent.children[1].style.color = 'orange';
+    //console.log(parent.firstElementChild.innerHTML)
+    //console.log(parent.lastElementChild.innerHTML)
+
+    //select only first
+    //const dayOne = document.querySelector('.days').innerHTML
+    //console.log(dayOne)
+    //select the child to parent
+    //const parentSelect = document.querySelector('.days').parentElement
+    //console.log(parentSelect)
+    const parentSelect = document.querySelector('.days').nextElementSibling.outerHTML
+    //console.log(parentSelect)
+
+    console.log(parent.childNodes)
+    
+</script>
 </html>

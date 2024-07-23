@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - 4</title>
+</head>
+<body style = "background-color : #212121; color : #fff; ">
+    <ul class = 'language'>
+        <li>javascript</li>
+        <li>react js</li>
+        <li>python</li>
+    </ul>
+</body>
+<script>
+    function addLangunage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addLangunage('html')
+    addLangunage('css')
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addOptiLanguage('ruby')
+    addOptiLanguage('bootstrap')
+
+    // Edit values 
+    const secondlang = document.querySelector("li:nth-child(2)") 
+
+    // edit method
+    //secondlang.innerHTML = 'mojo' // this way
+
+    const newli = document.createElement('li') // that way
+    newli.textContent = 'mojo'
+    secondlang.replaceWith(newli)
+
+    // edit 2nd method
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li> typescript </li>'
+
+    // remove 
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>

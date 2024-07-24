@@ -1,29 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event</title>
-</head>
-<body style="background-color: #414141; color: aliceblue;">
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
     <h2>Amazing image</h2>
-    <div >
-        <ul id="images">
-            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
-            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
-            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
-        </ul>
-   </div>
-    
-    <script>
-        //JavaScript is a synchronous, blocking, single-threaded language. That just means that only one operation can be in progress at a time.
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
 
-        document.getElementById("owl").onclick = function(){
-            alert('owl')
+    <script>
+      document.querySelector("#images").addEventListener("click", function (e) {
+        //console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+          const removeIt = e.target.parentNode;
+          removeIt.remove(); // new method
         }
+
+        //const removeIt = e.target.parentNode;
+        //removeIt.remove(); // new method
+
+        // removeIt.parentNode.removechild(removeIt) //old method
+      });
+      /*
+            //JavaScript is a synchronous, blocking, single-threaded language. That just means that only one operation can be in progress at a time.
+
+            //document.getElementById("owl").onclick = function () {
+            //alert("owl");
+            //};
+            document.getElementById("owl").addEventListener("click", function () {
+              //alert("owl once again");
+            });
+
+            // by default value is false of third parameter
+            //event propagation two context 1) event bubbling(false value) and event capturing(true value)
+
+            //  by default value of event propagation is false
+
+            document.getElementById("owl").addEventListener(
+              "click",
+              function (event) {
+                //console.log(event);
+              },
+              false
+            );
+
+            // attachEvent()
+            // jQuery - on
+            // these are main topics in events
+            // type, timestamp, defaultPrevented
+            // target, toElement, srcElement, currentTarget,
+            // clientX, clientY, screenX, screenY
+            // altkey, ctrlkey, shiftkey, keyCode
+
+            //*********** both are  event bubbling (by default false And false nhi bi li kha tb bi chle ga)
+            document.getElementById("images").addEventListener(
+              "click",
+              function (event) {
+                console.log("clicked on the ul");
+              },
+              false
+            );
+            // id = images k case m normal click pr console aaja yega
+
+            document.getElementById("owl").addEventListener(
+              "click",
+              function (event) {
+                console.log("clicked owl");
+                event.stopPropagation(); // event.stopProgation() k use se  only owl ka data/text show hoga. it is like a preventdefault
+              },
+              false
+            );
+            // id = owl k case m normal click pr console aaja yega  pr image  id jo hai vo parent div pr hai to owl bi click pr image wala text show krega pr sath m owl id wala bi difference itne hoga ki phle child ka text/data show hoga fir parent ka . in case of default and event bubbling
+
+            //*********** event capturing(true)
+            document.getElementById("images").addEventListener(
+              "click",
+              function (event) {
+                //console.log("clicked on the ul");
+              },
+              true
+            );
+            // id = images k case m normal click pr console aaja yega
+
+            document.getElementById("owl").addEventListener(
+              "click",
+              function (event) {
+                //console.log("clicked owl");
+              },
+              true
+            );
+            // id = owl k case m normal click pr console aaja yega  pr image  id jo hai vo parent div pr hai to owl bi click pr image wala text show krega pr sath m owl id wala bi difference itne hoga ki phle  parent  ka text/data show hoga fir child ka . in case of event capturing(true)
+
+            //preventdefault()
+            document.getElementById("google").addEventListener(
+              "click",
+              function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("google clicked");
+              },
+              false
+            );
+      */
     </script>
-</body>
+  </body>
 </html>

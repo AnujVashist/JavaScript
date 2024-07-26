@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event setInterval</title>
+  </head>
+  <body>
+    <pre>JAvascript events</pre>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const Setinterval = (str) => {
+      console.log(str, Date.now());
+    };
+    //continuesly print...
+    // in setinterval use the  3rd parameter
+
+    //setInterval(Setinterval, 1000, "h!!!");
+
+    const intervalId = setInterval(Setinterval, 1000, "h!!!");
+    clearInterval(intervalId);
+
+    const start = document
+      .querySelector("#start")
+      .addEventListener("click", () => {
+        setInterval(Setinterval, 1000, "h!!!");
+        console.log(start);
+      });
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(start);
+      console.log("stop");
+    });
+  </script>
+</html>

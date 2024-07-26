@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <h1>Set Time Out ||</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // settimeout is a method and also call the API
+    // handler is the function without name and callback
+    //setTimeout(function () {
+    //    console.log("UserName");
+    //  }, 2000);
+    // only reference of function not exicute
+    //const sayHello = function () {
+    //console.log("UserName");
+    //};
+    //setTimeout(sayHello, 2000);
+
+    //document.querySelector("h1").innerHTML = "Set time out ";
+    const changesText = function () {
+      document.querySelector("h1").innerHTML = "Set time out ";
+    };
+    const clearME = setTimeout(changesText, 4000);
+    // clearTimeout don't used directly. used in the events
+    //clearTimeout(clearME);
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(clearME);
+      console.log("stopped");
+    });
+  </script>
+</html>

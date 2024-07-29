@@ -134,10 +134,10 @@ const course = {
     courseInstructor: 'sam is a instructor od frontend development'
 }
 
-// const {courseInstructor} = course; //both are same {courseInstructor} or {courseInstructor : Instructo}
-const {courseInstructor : Instructo} = course;
+// const {courseInstructor} = course; //both are same {courseInstructor} or {courseInstructor : Instructor}
+const {courseInstructor : Instructor} = course;
 // console.log(courseInstructor);
-//console.log(Instructo);
+//console.log(Instructor);
 
 
 // json formatt and api used in the code .

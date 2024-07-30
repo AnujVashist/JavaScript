@@ -70,3 +70,5 @@ console.log(userOne);
 // one more method is instanceof
 
 // syntax of instanceof is -----object instanceof constructor-----
+
+//// commit text

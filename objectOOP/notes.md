@@ -1,4 +1,4 @@
-## javascript and oops
+## javascript, oops & classes
 
 ## oops
 
@@ -15,14 +15,14 @@
 
 object literal
 
-- - constructor function
-- - prototype
-- - classes
-- - Instances(new, this)
+- constructor function
+- prototype
+- classes
+- Instances(new, this)
 
 ## 4 Pillars
 
-- Abstraction
-- Encapsulation
-- Inheriance
-- Polymorphism
+- Abstraction - detail hide example fetch
+- Encapsulation - wrapperUp
+- Inheriance -
+- Polymorphism - poly mean many and morphism mean differ subroup or roup

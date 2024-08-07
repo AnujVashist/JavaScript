@@ -38,7 +38,7 @@ console.log(demo.email);
 //  access sub ko nhi dena chahte (us m customize code kr na chahte hai )
 // password dena hi nhi chaahta to kese password ka error show krna hai
 
-// jo bi variables hote hai jese this.email = email, this.password = password in pr getter na dsetter lga skte hai
+// jo bi variables hote hai jese this.email = email, this.password = password in pr getter and setter lga skte hai
 // jitne bi proterties bnaate hai jese this.email = email un m automatically getter and setter method bn jate hai
 
 // getter define kra hai to setter bi define kr na pde ga

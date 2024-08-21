@@ -4,10 +4,10 @@ let score = "33jihb";
 //console.log(typeof score);
 
 let valueInNumber = Number(score);
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber)
+//console.log(typeof valueInNumber); // number
+//console.log(valueInNumber); //NAN
 
-//33 => 33 number 
+//33 => 33 number
 // string "demo" => demo
 // "33abc" => NaN
 // true => 1; false => 0
@@ -16,14 +16,14 @@ let valueInNumber = Number(score);
 
 let isLoggedIn = 0;
 let boleanIsLoggedIN = Boolean(isLoggedIn);
-//console.log(boleanIsLoggedIN)
+//console.log(boleanIsLoggedIN); // false
 
 // boolean 1 => true, 0 => false, " " empty string  =>  false,  "demo" => true
 
 let someNumber = 33;
 let stringNumber = String(someNumber);
-//console.log(stringNumber) // 33 
-//console.log(typeof  stringNumber) // string 
+//console.log(stringNumber) // 33
+//console.log(typeof  stringNumber) // string
 
 //
 //alert
@@ -33,13 +33,11 @@ let stringNumber = String(someNumber);
 //confirm
 //shows a message and waits for the user to press “OK” or “Cancel”. It returns true for OK and false for Cancel/Esc.
 
-
 //*************** Operations ****************//
 /*---{https://tc39.es/ecma262/#sec-type-conversion}-----*/
 // console.log(1 +1);
 // console.log(1 + 1 + "1")
 // console.log("1" + 1 + 1)
-
 
 let gamecounter = 100;
 gamecounter++;
@@ -56,7 +54,6 @@ result = var1++;
 result = var;
 var = var + 1;
 */
-
 
 /// ****** Basic operators
 /*
@@ -80,10 +77,9 @@ console.log(2 > 1); // true
 // console.log(null > 0);  // false
 // console.log(undefined == 0) // false
 
-const id = Symbol('123');
-const accountId = Symbol('123');
-//console.log(id === accountId); values are same but reture values are not same because use the datatype symbol.
-
+const id = Symbol("123");
+const accountId = Symbol("123");
+//console.log(id == accountId); //values are same but reture values are not same because use the datatype symbol.
 
 //bigint datatypes
 
@@ -94,9 +90,9 @@ const bigNum = BigInt(123456789876543223456789876543234567);
 
 //object{}, array[], function name(params) {}
 
-const Myfunction = function (){
-    console.log("MY function datatype")
-}
+const Myfunction = function () {
+  console.log("MY function datatype");
+};
 //Myfunction(); // call the function
 //console.log(typeof Myfunction, "is a datatype of js");
 
@@ -106,32 +102,27 @@ const Myfunction = function (){
 
 /* ********************************************** */
 
-// Memory 1)stack, 2) Heap 
+// Memory 1)stack, 2) Heap
 // Stack Memory (primitive datatape)
 // Heap Memory (non-primitive datatype)
 
 let userName = "demodemo";
 let userAnother = userName;
 
-userAnother ="randomrandom"
+userAnother = "randomrandom";
 //console.log(userName);
 //console.log(userAnother);
-//In case of stack memory copy the value to other. and original value is same. 
+//In case of stack memory copy the value to other. and original value is same.
 
 // In case of Heap Memory  not copy the value only reference value  to another value.
 //example // Heap Memory (non-primitive datatype)
-const UserOne ={
-    email: "demo@gmail.com",
-    upi:"user@oyi"
-}
+const UserOne = {
+  email: "demo@gmail.com",
+  upi: "user@oyi",
+};
 
 let UserTwo = UserOne;
-UserTwo.email = "random@gmail.com"
+UserTwo.email = "random@gmail.com";
 
 //console.log(UserOne.email);
 //console.log(UserTwo.email);
-
-
-
-
-

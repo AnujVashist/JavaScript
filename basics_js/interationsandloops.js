@@ -35,10 +35,10 @@ for (let i = 0; i <= 10; i++) {
 }
 
 myArray = ["flash", "superman", "batman"];
-//console.log(myArray.length)
+//console.log(myArray.length);
 for (let i = 0; i < myArray.length; i++) {
   const element = myArray[i];
-  //console.log(element)
+  //console.log(element);
 }
 // without use the i++ only use the i then loop is print flash infinite time. use ++ in the loops.
 
@@ -46,10 +46,10 @@ for (let i = 0; i < myArray.length; i++) {
 
 for (let index = 1; index <= 20; index++) {
   if (index == 5) {
-    //console.log(`detected 5`) ;
+    //console.log(`detected 5`);
     break;
   }
-  //console.log(`value of index is : ${index}`)
+  //console.log(`value of index is : ${index}`);
 }
 
 //without use break values is
@@ -117,13 +117,13 @@ value of index is : 20
 */
 
 //while loop condition
-// In all loops initionlization , increment/ decrement and conditions all aare used in the loop
+// In all loops initionlization , increment/ decrement and conditions all are used in the loop
 // while (condition) {
 
 // }
 let index = 0;
 while (index <= 10) {
-  //console.log(`value of index is : ${index}`)
+  //console.log(`value of index is : ${index}`);
   index = index + 2;
 }
 
@@ -154,6 +154,8 @@ do {
 } while (scores <= 10);
 
 // Hign Order Array loop
+
+// https://www.geeksforgeeks.org/differences-between-the-for-in-for-of-loops-in-javascript/
 // for of loop
 
 // for (const iterator of object) {
@@ -185,10 +187,10 @@ Map(3) {
   'FR' => 'France'
 }
 */
-// array destructor
-// for (const [key, value] of map) {
-//     //console.log(key ,':-', value)
-// }
+// // array destructor
+// // for (const [key, value] of map) {
+//      console.log(key ,':-', value)
+// // }
 //output
 /*
 IN :- India
@@ -219,9 +221,9 @@ const myObject = {
 //   }
 // }
 
-// for (const key in myObject) {
-//   console.log(`${key} shortcut is for ${myObject[key]}`);
-// }
+for (const key in myObject) {
+  //console.log(`${key} shortcut is for ${myObject[key]}`);
+}
 /*
 js shortcut is for javascript
 cpp shortcut is for c++
@@ -235,7 +237,7 @@ for (const key in programming) {
   //console.log(programming);
   //console.log(programming[key]);
 }
-// In case of array only key show but in the object keyvalye show
+// In case of array only key show but in the object keyvalue show
 /*
 0 console.log(key) 
 1
@@ -255,9 +257,8 @@ map.set("IN", "India");
 
 // note : . A Map object is iterated by key-value pairs — a for...of loop returns a 2-member array of [key, value] for each iteration.
 // for (const key in map) {
-//     console.log(key)
+//   console.log(key);
 // }
-
 // use the object using the for-in loop and use the array use the for-of loop and other methods used in the array like forEach , map, filter, reduce etc method used...
 
 // forEach loop
@@ -368,13 +369,13 @@ const newnumbers = MyNumbers.map((nums) => {
 
 const myNumb = [1, 2, 3, 4, 5, 6];
 //initialValue is 0
-// const TotalNum = myNumb.reduce( function (acc, currval) {
-//     console.log(`accumulator value :  ${acc} and  currentValue : ${currval} `)
-//     return acc + currval
-// }, 0)
+// const TotalNum = myNumb.reduce(function (acc, currval) {
+//   console.log(`accumulator value :  ${acc} and  currentValue : ${currval} `);
+//   return acc + currval;
+// }, 0);
 
 // using aarrow function
-const TotalNum = myNumb.reduce((acc, currval) => acc + currval, 0);
+//const TotalNum = myNumb.reduce((acc, currval) => acc + currval, 0);
 //console.log(TotalNum)
 
 const shoppingCart = [
@@ -399,3 +400,7 @@ const shoppingCart = [
 //console.log(shoppingCart)
 const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0);
 //console.log(priceToPay)
+// const sum = (a, b) => {
+//   return Math.round(1 + (a * b) / 4);
+// };
+// console.log(sum(2, 3));

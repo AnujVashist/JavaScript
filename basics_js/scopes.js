@@ -15,7 +15,7 @@ if (true) {
 // console.log(b);
 // console.log(c);
 
-// paraent function
+// parent function
 function one() {
   const UserName = "macBook";
 

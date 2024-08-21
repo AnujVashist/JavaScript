@@ -13,7 +13,7 @@ if (score > 100) {
   const power = "fly";
   //console.log(`user power is : ${power}`);
 }
-//show the error in case of conmst or let because both are used in the block scope but var is used and no error show because var is globle scope .
+//show the error in case of const or let because both are used in the block scope but var is used and no error show because var is globle scope .
 //console.log(`user power is : ${power}`);
 
 // implicity scope or maanliziye yhe scope hai only for one line code excution only
@@ -39,12 +39,12 @@ const debitCard = true;
 const loggedInFromgoogle = false;
 const loggedInFromgEmail = true;
 
-// if (userLoggedIn && debitCard && 2 ===2) {
+// if (userLoggedIn && debitCard && 2 === 2) {
 //   console.log("Allow to buy course");
 // }
 
-// if(loggedInFromgoogle || loggedInFromgEmail){
-//     console.log('Log In Successfully')
+// if (loggedInFromgoogle || loggedInFromgEmail) {
+//   console.log("Log In Successfully");
 // }
 
 // switch statement
@@ -154,6 +154,7 @@ const emptyObject = {};
 // 0 == ''
 
 // Nullish coalescing Operator (??)  : null , undefined
+//The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
 
 let val1;
 // val1 = 5 ?? 10; // 5

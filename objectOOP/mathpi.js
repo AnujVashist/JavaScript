@@ -14,7 +14,7 @@ output
 */
 
 console.log(Math.PI);
-Math.PI = 5; // no chnage the value of PI it is universal constant
+Math.PI = 5; // no change the value of PI it is universal constant
 console.log(Math.PI);
 
 const chai = {

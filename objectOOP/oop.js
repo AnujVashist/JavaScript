@@ -51,14 +51,14 @@ const userTwo = user("User_TWo", 12, false);
 // this overwrite problem solve using new keyword aur instance
 const userOne = new user("demo-demo", 9, true);
 const userTwo = new user("User_TWo", 12, false);
-console.log(userOne);
-//console.log(userTwo);
+// console.log(userOne);
+// console.log(userTwo);
 
 //both values are different not overright the value because use the new keyword
 
 // constructor functiuon provide the new instance
 
-// Step 1: jb bo new keyword use hota hai to empty object create hota hai. //jis ko instance bola ja ta hai
+// Step 1: jb bi new keyword use hota hai to empty object create hota hai. //jis ko instance bola ja ta hai
 // Step 2: constrcutor function call hota hai new keyword k karan
 // Step 3: jitne bi arguments hote hai un ko pack kr ta hai aur un ko dede ta hai
 // Step 4: function m miljate hai

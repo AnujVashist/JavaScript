@@ -81,7 +81,7 @@ const user = {
 // user.name = "sam";
 // user.welcomeMessages();
 
-//console.log(this); // output of this keyword is empty object {}. current context oe value of this console is empty . no globle scope value in this code .
+//console.log(this); // output of this keyword is empty object {}. current context or value of this console is empty . no globle scope value in this code .
 
 // arrow function
 
